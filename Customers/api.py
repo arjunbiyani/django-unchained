@@ -12,3 +12,4 @@ class CustomerViewSet(viewsets.ModelViewSet):
         permissions.AllowAny
     ]
     serializer_class= CustomerSerializer
+    
