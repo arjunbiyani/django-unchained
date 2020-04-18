@@ -4,7 +4,7 @@ from django.db import models
 
 class Users(models.Model):
     id = models.IntegerField
-    name = models.CharField(max_length=60)
+    username = models.CharField(max_length=60)
     created_at = models.DateTimeField('date published')
 
     def __str__(self):
