@@ -7,6 +7,7 @@ class inventory(models.Model):
     sku_code = models.CharField(max_length=60)
     price = models.IntegerField
     stock = models.IntegerField
+    created_by = models.CharField(max_length=60)
     created_at = models.DateTimeField('created at')
     updated_at = models.DateTimeField('updated at')
 
