@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-
+from decouple import config as decouple_config
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -78,11 +78,11 @@ WSGI_APPLICATION = 'unchained.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'unchained',
-        'USER': 'acko',
-        'PASSWORD': 'root',
-        'HOST': 'localhost',
-        'PORT': '5432'
+        'NAME': decouple_config('PG_DB_NAME', 'unchained'),
+        'USER': decouple_config('PG_DB_USER', 'postgres'),
+        'PASSWORD': decouple_config('PG_DB_PASSWORD', 'root'),
+        'HOST': decouple_config('PG_HOST', 'localhost'),
+        'PORT': decouple_config('PG_PORT', '5432'),
     }
 }
 
