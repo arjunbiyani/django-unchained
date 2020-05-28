@@ -6,9 +6,9 @@ class InventorySerializer(serializers.ModelSerializer):
         model = inventory
         fields = ['id',
                   'sku_code',
-                  'sku_name',
                   'price',
-                  'stocks',
+                  'stock',
+                  'created_at',
                   'created_by',
                   'created_at'
                   ]

@@ -1,11 +1,11 @@
 from django.urls import  path, include
 from . import views
 from rest_framework import  routers
-
-routers= routers.DefaultRouter()
-routers.register('inventory',views.InventoryView)
-
+from  django.conf.urls import url
+router= routers.DefaultRouter()
 urlpatterns=[
-    path('inventory/',include(routers.urls))
+    path('all',
+         views.getInventory,
+         name='inventory')
 ]
 
