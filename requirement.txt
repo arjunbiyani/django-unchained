@@ -2,3 +2,5 @@ pipenv
 djangorestframework
 psycopg2
 python-decouple
+django-material
+django-viewflow

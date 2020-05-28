@@ -4,7 +4,7 @@ from inventory.serializers import InventorySerializer
 from inventory.models import inventory
 
 @api_view(['GET'])
-def getInventory(request):
+def getInventory(self):
     inventories = inventory.objects.all().order_by('id')
     serializer = InventorySerializer(inventories, many=True)
     return Response(serializer.data)
