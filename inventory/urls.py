@@ -6,6 +6,9 @@ router= routers.DefaultRouter()
 urlpatterns=[
     path('all',
          views.getInventory,
-         name='inventory')
+         name='inventory'),
+    path('add',
+         views.insertInventory,
+         name='Inser inventory')
 ]
 

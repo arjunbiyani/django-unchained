@@ -10,6 +10,7 @@ class InventorySerializer(serializers.ModelSerializer):
                   'stock',
                   'created_at',
                   'created_by',
-                  'created_at'
+                  'created_at',
+                  'updated_at'
                   ]
 
