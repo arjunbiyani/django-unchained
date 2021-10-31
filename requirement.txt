@@ -1,6 +1,7 @@
 pipenv
 djangorestframework
-psycopg2
+psycopg2==2.9.1
 python-decouple
 django-material
 django-viewflow
+django
